@@ -20,7 +20,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*", "./dist/*", ""]
-    }
+    },
+    "types": ["vitest", "@testing-library/jest-dom"]
   },
   "include": ["src"],
   "exclude": [

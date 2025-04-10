@@ -78,7 +78,11 @@ const MovieList: React.FC<MovieListProps> = ({
 
       {hasMore && (
         <div className="flex justify-center mt-8">
-          <Button onClick={handleShowMore} variant="outline">
+          <Button
+            onClick={handleShowMore}
+            variant="outline"
+            data-testid="show-more-button"
+          >
             Show more
           </Button>
         </div>

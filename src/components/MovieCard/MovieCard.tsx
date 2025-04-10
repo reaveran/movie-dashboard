@@ -15,6 +15,7 @@ const MovieCard = forwardRef<HTMLDivElement, MovieCardProps>(
         ref={ref}
         className="rounded-md overflow-hidden bg-white border-0 cursor-pointer"
         onClick={onClick}
+        data-testid={`movie-${movie.id}`}
       >
         <div>
           <div className="aspect-[2/3] w-full bg-gray-100 relative">

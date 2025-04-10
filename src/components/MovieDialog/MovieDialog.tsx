@@ -45,6 +45,7 @@ const MovieDialog: React.FC<MovieDialogProps> = ({ open, movie, onClose }) => {
             isCircular
             className="absolute right-2 top-2 z-10 bg-black bg-opacity-50"
             onClick={onClose}
+            data-testid="close-dialog-button"
           >
             <Xmark className="h-5 w-5 text-white" />
           </Dialog.DismissTrigger>

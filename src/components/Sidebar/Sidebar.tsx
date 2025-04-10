@@ -13,11 +13,13 @@ const Sidebar: React.FC = () => {
       icon: HomeAlt,
       title: "Home",
       href: "/",
+      testId: "menu-home",
     },
     {
       icon: Heart,
       title: "Favorites",
       href: "/favorites",
+      testId: "menu-favorites",
     },
   ];
   return (
@@ -27,7 +29,7 @@ const Sidebar: React.FC = () => {
       </div>
       <div className="">
         <List>
-          {menus.map(({ icon: Icon, title, href }) => {
+          {menus.map(({ icon: Icon, title, href, testId }) => {
             const isActive = location.pathname === href;
             return (
               <List.Item
@@ -36,6 +38,7 @@ const Sidebar: React.FC = () => {
                   hover:bg-orange-100 hover:text-orange-600`}
                 key={title}
                 onClick={() => navigate(href)}
+                data-testid={testId}
               >
                 <List.ItemStart>
                   <Icon className="h-[18px] w-[18px]" />

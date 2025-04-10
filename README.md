@@ -15,6 +15,7 @@ Movie Dashboard is movie mini dashboard built using **React** and **Vite**. This
 - **ESLint & Prettier** - For code linting and formatting.
 - **Tailwind CSS** - A utility-first CSS framework.
 - **Vitest & Testing Library** - For unit and integration testing.
+- **Redux** - For state management.
 
 ## 📂 Project Structure
 
