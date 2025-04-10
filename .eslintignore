@@ -1,0 +1,9 @@
+!/**/.eslintrc.js
+!/*.js
+!/*.d.ts
+*.snap
+vite.config.ts
+build
+coverage
+examples
+node_modules
