@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { List } from "@material-tailwind/react";
 import { Heart, HomeAlt } from "iconoir-react";
 
@@ -6,6 +6,8 @@ import fullLogo from "@/assets/images/png/full-logo.png";
 
 const Sidebar: React.FC = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
   const menus = [
     {
       icon: HomeAlt,
@@ -25,18 +27,23 @@ const Sidebar: React.FC = () => {
       </div>
       <div className="">
         <List>
-          {menus.map(({ icon: Icon, title, href }) => (
-            <List.Item
-              className="px-4 cursor-pointer rounded-none hover:bg-orange-100 hover:text-orange-600"
-              key={title}
-              onClick={() => navigate(href)}
-            >
-              <List.ItemStart>
-                <Icon className="h-[18px] w-[18px]" />
-              </List.ItemStart>
-              {title}
-            </List.Item>
-          ))}
+          {menus.map(({ icon: Icon, title, href }) => {
+            const isActive = location.pathname === href;
+            return (
+              <List.Item
+                className={`px-4 cursor-pointer rounded-none 
+                  ${isActive ? "text-orange-600" : ""}
+                  hover:bg-orange-100 hover:text-orange-600`}
+                key={title}
+                onClick={() => navigate(href)}
+              >
+                <List.ItemStart>
+                  <Icon className="h-[18px] w-[18px]" />
+                </List.ItemStart>
+                {title}
+              </List.Item>
+            );
+          })}
         </List>
       </div>
     </div>

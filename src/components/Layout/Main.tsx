@@ -13,7 +13,7 @@ const Main = () => {
       <div className="flex flex-1">
         {/* Sidebar */}
         <aside
-          className={`fixed inset-y-0 left-0 z-40 w-80 bg-white transform transition-transform duration-200 ease-in-out 
+          className={`fixed inset-y-0 left-0 z-40 w-60 lg:w-80 bg-white transform transition-transform duration-200 ease-in-out 
           ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 md:static md:block`}
         >
           <Sidebar />
@@ -28,7 +28,7 @@ const Main = () => {
         )}
 
         {/* Main Content */}
-        <main className="flex-1 bg-gray-100 p-6">
+        <main className="flex-1 bg-gray-50 p-6">
           <Outlet />
         </main>
       </div>

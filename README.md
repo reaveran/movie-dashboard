@@ -28,7 +28,8 @@ src/
 │── hooks/            # Custom React hooks
 │── modules/          # Feature-specific logic and utilities
 │── navigation/       # React Router configuration
-│── pages/home/       # Home page for searching github username
+│── pages/home/       # Home page for movies dashboard
+│── pages/favorites/  # Favorites page for favorite movies saved
 │── utils/            # Utility functions and helper methods
 │── App.tsx           # Root component
 │── main.tsx          # Application entry point

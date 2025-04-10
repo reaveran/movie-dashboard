@@ -10,5 +10,14 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [mtConfig],
+  plugins: [
+    mtConfig({
+      colors: {
+        primary: {
+          default: "#dc7803",
+          dark: "#bd6702",
+        },
+      },
+    }),
+  ],
 };
